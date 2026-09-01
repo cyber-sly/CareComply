@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* ---------- Color tokens (from CareComply design system) ---------- */
+  --color-ink: #1c2b39;
+  --color-ink-soft: #2c3e4f;
+  --color-paper: #f7f4ed;
+  --color-paper-deep: #efeae0;
+  --color-line: #dcd5c6;
+  --color-verified: #2f6f4f;
+  --color-verified-soft: #e7f0ea;
+  --color-clay: #b5482c;
+  --color-clay-soft: #f7e8e2;
+  --color-grey: #6b6358;
+  --color-grey-light: #93897a;
+
+  /* ---------- Type ---------- */
+  --font-display: var(--font-display), Georgia, serif;
+  --font-body: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: var(--font-mono), "Courier New", monospace;
+
+  /* ---------- Layout ---------- */
+  --container-site: 1180px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    line-height: 1.5;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-verified);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
