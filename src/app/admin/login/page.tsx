@@ -1,6 +1,25 @@
+import { redirect } from "next/navigation";
 import { LoginForm } from "@/components/admin/login-form";
+import { createClient, isSupabaseConfigured } from "@/lib/supabase/server";
 
-export default function AdminLoginPage() {
+export default async function AdminLoginPage() {
+  if (isSupabaseConfigured()) {
+    const supabase = await createClient();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (user) {
+      const { data: adminRow } = await supabase
+        .from("admin_users")
+        .select("user_id")
+        .eq("user_id", user.id)
+        .maybeSingle();
+
+      if (adminRow) redirect("/admin");
+    }
+  }
+
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-sm flex-col justify-center px-6 py-20">
       <div className="mb-8 text-center">

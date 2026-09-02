@@ -1,14 +1,17 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
+// This proxy's only job is to keep the Supabase session cookie fresh on
+// every request. The actual "is this person allowed into /admin" check
+// happens in src/app/admin/(dashboard)/layout.tsx as a Server Component —
+// that runs in the standard Node.js runtime, which handles Supabase's
+// cookie-based sessions more reliably than the Edge runtime does here.
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  // If Supabase isn't configured yet, don't block the app — just let
-  // requests through so the rest of the site still works during setup.
   if (!supabaseUrl || !supabaseAnonKey) {
     return response;
   }
@@ -28,34 +31,9 @@ export async function proxy(request: NextRequest) {
     },
   });
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  const isAdminRoute = request.nextUrl.pathname.startsWith("/admin");
-  const isLoginRoute = request.nextUrl.pathname === "/admin/login";
-
-  let isAdmin = false;
-  if (user) {
-    const { data } = await supabase
-      .from("admin_users")
-      .select("user_id")
-      .eq("user_id", user.id)
-      .maybeSingle();
-    isAdmin = Boolean(data);
-  }
-
-  if (isAdminRoute && !isLoginRoute && !isAdmin) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/admin/login";
-    return NextResponse.redirect(url);
-  }
-
-  if (isLoginRoute && isAdmin) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/admin";
-    return NextResponse.redirect(url);
-  }
+  // Just touching getUser() here refreshes an expiring session's cookies
+  // via the setAll callback above. We deliberately don't act on the result.
+  await supabase.auth.getUser();
 
   return response;
 }
