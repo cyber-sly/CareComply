@@ -10,7 +10,7 @@ const RESOURCES = [
   {
     code: "IR",
     name: "Incident Report Form",
-    description: "A ready-to-use incident report form covering the core fields CQC/CIW expect to see.",
+    description: "A ready-to-use incident report form covering the core fields CIW expects to see.",
   },
   {
     code: "FR",
@@ -37,7 +37,7 @@ export default function FreeResourcesPage() {
           </h1>
           <p className="text-[15px] leading-relaxed text-ink-soft md:text-base">
             Download these free documents and see the quality for yourself. We&rsquo;ll also send
-            you occasional templates and CQC/CIW tips by email — unsubscribe any time.
+            you occasional templates and CIW tips by email — unsubscribe any time.
           </p>
         </div>
       </Container>

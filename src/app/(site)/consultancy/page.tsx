@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { ConsultancyServices } from "@/components/marketing/consultancy-services";
 
 export const metadata = {
-  title: "Consultancy — CareComply UK",
+  title: "Consultancy — KEPA HUB",
   description: "Work directly with a registered manager consultant for mock inspections, policy reviews, and mentoring.",
 };
 

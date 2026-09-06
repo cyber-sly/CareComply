@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = await getPost(slug);
   if (!post) return {};
   return {
-    title: `${post.title} — CareComply UK`,
+    title: `${post.title} — KEPA HUB`,
     description: post.excerpt ?? undefined,
   };
 }

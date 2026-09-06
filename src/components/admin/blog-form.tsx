@@ -71,7 +71,7 @@ export function BlogForm({ post }: { post?: BlogPostRow }) {
         <input
           id="author"
           name="author"
-          defaultValue={post?.author ?? "CareComply UK"}
+          defaultValue={post?.author ?? "KEPA HUB"}
           className="w-full rounded border border-line bg-white px-3.5 py-2.5 text-sm focus:border-verified focus:outline-none"
         />
       </div>

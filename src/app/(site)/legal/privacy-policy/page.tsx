@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LegalPage } from "@/components/marketing/legal-page";
 
-export const metadata = { title: "Privacy Policy — CareComply UK" };
+export const metadata = { title: "Privacy Policy — KEPA HUB" };
 
 export default function PrivacyPolicyPage() {
   return (
@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
       updated="[PLACEHOLDER — to be reviewed by a solicitor before publishing] · Last updated: June 2026"
     >
       <p>
-        This Privacy Policy explains how CareComply UK (&ldquo;we&rdquo;, &ldquo;us&rdquo;)
+        This Privacy Policy explains how KEPA HUB (&ldquo;we&rdquo;, &ldquo;us&rdquo;)
         collects, uses, and protects your personal information when you visit our website,
         purchase a template, or book a consultation. This is a draft template and must be
         reviewed and confirmed against your actual data practices before publishing.

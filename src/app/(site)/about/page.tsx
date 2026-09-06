@@ -3,14 +3,14 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { ButtonLink } from "@/components/ui/button";
 
 export const metadata = {
-  title: "About — CareComply UK",
+  title: "About — KEPA HUB",
   description: "Built from real experience in care compliance.",
 };
 
 const VALUES = [
   {
     title: "Written for the real thing",
-    body: "Every document is built around what CQC and CIW actually look for — not generic placeholder text.",
+    body: "Every document is built around what CIW actually looks for — not generic placeholder text.",
   },
   {
     title: "Yours to make your own",
@@ -35,10 +35,10 @@ export default function AboutPage() {
             Built from real experience in care compliance.
           </h1>
           <p className="mb-4 max-w-[540px] text-[15.5px] leading-relaxed text-ink-soft">
-            CareComply UK was founded by [Name], a registered manager with [X] years of experience
+            KEPA HUB was founded by [Name], a registered manager with [X] years of experience
             in domiciliary care. After seeing the same paperwork gaps come up again and again
             during inspections, [Name] started writing templates that actually reflect how real
-            agencies operate — not generic downloads, but documents built around CQC and CIW
+            agencies operate — not generic downloads, but documents built around CIW
             expectations.
           </p>
           <p className="mb-6 max-w-[540px] text-[15.5px] leading-relaxed text-ink-soft">

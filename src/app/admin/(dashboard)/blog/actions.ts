@@ -38,7 +38,7 @@ export async function saveBlogPost(
     excerpt: excerpt || null,
     content_html: contentHtml,
     cover_image_url: coverImageUrl || null,
-    author: author || "CareComply UK",
+    author: author || "KEPA HUB",
     published,
   };
 

@@ -2,7 +2,7 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  /* ---------- Color tokens (from CareComply design system) ---------- */
+  /* ---------- Color tokens (from KEPA HUB design system) ---------- */
   --color-ink: #1c2b39;
   --color-ink-soft: #2c3e4f;
   --color-paper: #f7f4ed;

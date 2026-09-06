@@ -18,7 +18,7 @@ const PATHWAYS = [
   {
     tag: "For existing agencies",
     title: "Preparing for inspection",
-    body: "Audit-ready care plans, risk assessments and policies, reviewed against CQC and CIW inspection criteria.",
+    body: "Audit-ready care plans, risk assessments and policies, reviewed against CIW inspection criteria.",
     href: "/shop/starter-pack",
     cta: "View Starter Pack",
   },
@@ -42,7 +42,7 @@ const FREE_ITEMS = [
 const TESTIMONIALS = [
   {
     quote:
-      "Saved us weeks of paperwork before our CQC inspection. Everything was already aligned to what they actually asked for.",
+      "Saved us weeks of paperwork before our CIW inspection. Everything was already aligned to what they actually asked for.",
     who: "Registered manager, Midlands [placeholder]",
   },
   {
@@ -69,7 +69,7 @@ export default async function HomePage() {
       <section>
         <Container className="grid grid-cols-1 items-center gap-14 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-24">
           <div>
-            <Eyebrow>Aligned to CQC &amp; CIW standards</Eyebrow>
+            <Eyebrow>Aligned to CIW standards</Eyebrow>
             <h1 className="mb-[22px] text-[38px] leading-[1.1] md:text-[52px] md:leading-[1.08]">
               Compliant care paperwork, done in <span className="text-verified">minutes</span> — not months.
             </h1>
@@ -85,7 +85,7 @@ export default async function HomePage() {
               </ButtonLink>
             </div>
             <div className="flex flex-wrap gap-7 text-[13.5px] text-grey">
-              {["Written for CQC & CIW standards", "Instant digital download", "Editable Word & PDF"].map((t) => (
+              {["Written for CIW standards", "Instant digital download", "Editable Word & PDF"].map((t) => (
                 <span key={t} className="flex items-center gap-1.5">
                   <Check size={15} strokeWidth={3} className="text-verified" />
                   {t}
@@ -184,7 +184,7 @@ export default async function HomePage() {
                 Sometimes a template isn&rsquo;t enough.
               </h2>
               <p className="text-[15px] leading-relaxed text-white/80">
-                If you need a second pair of expert eyes — a mock CIW/CQC inspection, a full policy review, or ongoing mentoring as a registered manager — book time directly with our consultant.
+                If you need a second pair of expert eyes — a mock CIW inspection, a full policy review, or ongoing mentoring as a registered manager — book time directly with our consultant.
               </p>
             </div>
             <ButtonLink href="/consultancy" variant="on-dark" className="shrink-0">

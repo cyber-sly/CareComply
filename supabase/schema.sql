@@ -1,5 +1,5 @@
 -- ============================================================================
--- CareComply UK — Supabase schema
+-- KEPA HUB — Supabase schema
 -- Run this once in the Supabase SQL Editor (Project → SQL Editor → New query)
 -- ============================================================================
 
@@ -88,7 +88,7 @@ create table if not exists blog_posts (
   excerpt text,
   content_html text not null default '',  -- rich text output from the admin editor
   cover_image_url text,
-  author text default 'CareComply UK',
+  author text default 'KEPA HUB',
   published boolean not null default false,
   published_at timestamptz,
   created_at timestamptz not null default now(),
@@ -236,11 +236,11 @@ create policy "Admins can delete blog images"
 -- SEED DATA (the original 12-product catalogue, so the site isn't empty)
 -- ============================================================================
 insert into products (slug, name, price, type, tag, description, contents, featured, sort_order) values
-  ('starter-pack', 'Domiciliary Care Starter Pack', 49, 'Bundle', 'Most popular for new agencies', '10 person-centred care plans and 6 risk assessments, fully editable and ready for CQC/CIW-aligned care delivery from day one.', array['10 person-centred care plans','6 risk assessments','Word & PDF, instant download'], false, 1),
+  ('starter-pack', 'Domiciliary Care Starter Pack', 49, 'Bundle', 'Most popular for new agencies', '10 person-centred care plans and 6 risk assessments, fully editable and ready for CIW-aligned care delivery from day one.', array['10 person-centred care plans','6 risk assessments','Word & PDF, instant download'], false, 1),
   ('manager-toolkit', 'Registered Manager Toolkit', 79, 'Bundle', null, 'Supervisions, spot checks, audits and appraisals — 10 management forms total.', array['Supervisions & spot checks','Audits & appraisals','10 management forms total'], false, 2),
   ('policy-pack', 'Policies & Procedures Pack', 149, 'Bundle', null, '80+ policies covering safeguarding, MCA/DoLS, IPC and the full inspection scope.', array['80+ policies included','Safeguarding, MCA/DoLS, IPC','Covers full inspection scope'], true, 3),
   ('premium-kit', 'Complete Care Agency Start-Up Kit', 299, 'Bundle', null, 'Everything above, plus a Statement of Purpose and more — best value for new agencies.', array['Everything above, plus','Statement of Purpose & more','Best value for new agencies'], false, 4),
-  ('falls-risk-assessment', 'Falls Risk Assessment', 5, 'Single template', null, 'A single, CQC/CIW-aligned falls risk assessment template.', array[]::text[], false, 5),
+  ('falls-risk-assessment', 'Falls Risk Assessment', 5, 'Single template', null, 'A single, CIW-aligned falls risk assessment template.', array[]::text[], false, 5),
   ('medication-care-plan', 'Medication Care Plan', 5, 'Single template', null, 'A single, editable medication care plan template.', array[]::text[], false, 6),
   ('all-risk-assessments', 'All Risk Assessments', 19, 'Mini bundle', null, 'Every risk assessment template in one mini bundle.', array[]::text[], false, 7),
   ('spot-check-form', 'Spot Check Form', 5, 'Single template', null, 'A single spot check form for registered managers.', array[]::text[], false, 8),
@@ -258,7 +258,7 @@ insert into blog_posts (slug, title, excerpt, author, published, published_at, c
   'how-to-pass-a-ciw-inspection',
   'How to Pass a CIW Inspection',
   'The documentation and preparation steps that make the biggest difference when CIW comes to inspect your domiciliary care service.',
-  'CareComply UK',
+  'KEPA HUB',
   true,
   '2026-06-01T09:00:00Z',
   '<p>A CIW inspection can feel like it arrives all at once, but the agencies that come through it well usually have one thing in common: their documentation already tells the story the inspector is trying to piece together. Passing isn''t about last-minute scrambling — it''s about your paperwork doing the talking before you even open your mouth.</p>
@@ -287,7 +287,7 @@ insert into blog_posts (slug, title, excerpt, author, published, published_at, c
   'top-20-care-policies',
   'Top 20 Care Policies Every Agency Needs',
   'Not every policy carries equal weight in an inspection. Here''s which ones matter most, and where to focus first.',
-  'CareComply UK',
+  'KEPA HUB',
   true,
   '2026-06-05T09:00:00Z',
   '<p>Every domiciliary care agency needs policies, but not every policy carries equal weight in an inspection. Some get read closely, tested against real incidents, and cross-checked with staff knowledge. Knowing which ones matter most helps you prioritise where to focus first.</p>
@@ -315,19 +315,19 @@ insert into blog_posts (slug, title, excerpt, author, published, published_at, c
 <li>Visitors and Volunteers Policy</li>
 <li>Equal Opportunities Employment Policy</li>
 </ul>
-<blockquote><p>All 20 of these, plus 60 more, are included in our Policies &amp; Procedures Pack — written around current CQC/CIW expectations. <a href="/shop/policy-pack">View Policy Pack →</a></p></blockquote>
+<blockquote><p>All 20 of these, plus 60 more, are included in our Policies &amp; Procedures Pack — written around current CIW expectations. <a href="/shop/policy-pack">View Policy Pack →</a></p></blockquote>
 <h2>Having the policy isn''t the same as living it</h2>
 <p>Inspectors don''t just want to see a safeguarding policy exists — they''ll often ask a member of staff what they''d do if they suspected abuse. If the answer doesn''t match the policy, that gap gets noticed. Treat every policy as something your team should be able to talk through in their own words, not just something filed away.</p>
 <h2>Reviewing what you already have</h2>
 <p>If your agency already has policies in place, the question worth asking isn''t "do we have one?" but "when did we last update it, and does it reflect how we actually work now?" Policies that haven''t been reviewed in years are a common inspection finding, even when the content itself is reasonable.</p>
-<blockquote><p>Not sure if your existing policies would hold up? We review policies against current CQC/CIW expectations and return tracked-change recommendations. <a href="/consultancy">See Policy Review Service →</a></p></blockquote>
-<p><em>This article is general guidance. Always confirm current requirements against the latest published CQC or CIW frameworks for your service type.</em></p>'
+<blockquote><p>Not sure if your existing policies would hold up? We review policies against current CIW expectations and return tracked-change recommendations. <a href="/consultancy">See Policy Review Service →</a></p></blockquote>
+<p><em>This article is general guidance. Always confirm current requirements against the latest published CIW framework for your service type.</em></p>'
 ),
 (
   'writing-person-centred-care-plans',
   'Writing Person-Centred Care Plans',
   'A care plan can use all the right language and still describe a generic service user rather than the specific person it''s meant for.',
-  'CareComply UK',
+  'KEPA HUB',
   true,
   '2026-06-10T09:00:00Z',
   '<p>"Person-centred" is one of the most-used phrases in care documentation, and one of the easiest to write without actually doing. A care plan can use all the right language and still describe a generic service user rather than the specific person it''s meant for.</p>
@@ -348,16 +348,16 @@ insert into blog_posts (slug, title, excerpt, author, published, published_at, c
 <h2>Keeping plans alive, not just compliant</h2>
 <p>A care plan that''s accurate on the day it''s written but never revisited stops being person-centred the moment something changes. Build in regular reviews, and update the plan immediately after any change in the person''s needs, not just at the scheduled review date.</p>
 <blockquote><p>If you''d like a second opinion on whether your current care plans are genuinely person-centred, our consultancy service offers a full review. <a href="/consultancy">See Consultancy Services →</a></p></blockquote>
-<p><em>This article is general guidance. Always check current CQC or CIW standards for the specific requirements of person-centred care documentation.</em></p>'
+<p><em>This article is general guidance. Always check current CIW standards for the specific requirements of person-centred care documentation.</em></p>'
 ),
 (
-  'documents-required-by-cqc-and-ciw',
-  'What Documents Are Required by CQC and CIW',
-  'CQC and CIW have different frameworks, but the documentation they expect from a domiciliary care agency overlaps heavily. A complete checklist.',
-  'CareComply UK',
+  'documents-required-by-ciw',
+  'What Documents Are Required by CIW',
+  'A complete checklist of the documentation CIW expects to see from a domiciliary care agency.',
+  'KEPA HUB',
   true,
   '2026-06-15T09:00:00Z',
-  '<p>CQC (England) and CIW (Wales) have different frameworks, but in practice the documentation they expect to see from a domiciliary care agency overlaps heavily. If you''re operating across the border, or simply want a complete picture, this checklist covers the core categories both regulators look for.</p>
+  '<p>CIW expects a defined set of documentation from every domiciliary care agency it inspects. This checklist covers the core categories CIW looks for.</p>
 <h2>Care delivery documentation</h2>
 <ul>
 <li>Person-centred care plans for every service user</li>
@@ -377,7 +377,7 @@ insert into blog_posts (slug, title, excerpt, author, published, published_at, c
 </ul>
 <blockquote><p>Our Registered Manager Toolkit covers the governance side — spot checks, supervisions, audits, and appraisal forms in one bundle. <a href="/shop/manager-toolkit">View Manager Toolkit →</a></p></blockquote>
 <h2>Policy documentation</h2>
-<p>Both regulators expect a comprehensive set of written policies covering safeguarding, medication, infection control, the Mental Capacity Act, whistleblowing, equality and diversity, and health and safety, among others. See our related article on the top 20 policies every agency needs for a fuller breakdown.</p>
+<p>CIW expects a comprehensive set of written policies covering safeguarding, medication, infection control, the Mental Capacity Act, whistleblowing, equality and diversity, and health and safety, among others. See our related article on the top 20 policies every agency needs for a fuller breakdown.</p>
 <h2>Workforce documentation</h2>
 <ul>
 <li>DBS checks and recruitment records</li>
@@ -386,8 +386,8 @@ insert into blog_posts (slug, title, excerpt, author, published, published_at, c
 <li>Staff rotas demonstrating adequate coverage</li>
 </ul>
 <h2>Business continuity and emergency planning</h2>
-<p>Increasingly, both CQC and CIW expect to see a Business Continuity Plan and emergency planning documentation — covering what happens if staff can''t get to service users, or if a major disruption affects the service.</p>
+<p>Increasingly, CIW expects to see a Business Continuity Plan and emergency planning documentation — covering what happens if staff can''t get to service users, or if a major disruption affects the service.</p>
 <blockquote><p>Our Complete Start-Up Kit includes Business Continuity Planning and Emergency Planning documents alongside the full template library. <a href="/shop/premium-kit">View Complete Start-Up Kit →</a></p></blockquote>
-<p><em>This article is general guidance. Requirements vary by service type and nation — always confirm against the latest published CQC or CIW frameworks.</em></p>'
+<p><em>This article is general guidance. Requirements vary by service type — always confirm against the latest published CIW framework.</em></p>'
 )
 on conflict (slug) do nothing;

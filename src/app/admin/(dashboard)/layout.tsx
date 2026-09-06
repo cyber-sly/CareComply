@@ -15,9 +15,8 @@ export default async function AdminDashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Middleware already redirects unauthenticated/non-admin visitors, but we
-  // double-check here since layouts render before middleware guarantees in
-  // some edge/runtime configurations, and to fetch the admin's email for display.
+  // This layout is the actual gate for /admin — the proxy (src/proxy.ts) only
+  // refreshes the session cookie and doesn't make allow/deny decisions itself.
   let email: string | null = null;
 
   if (isSupabaseConfigured()) {
@@ -44,9 +43,8 @@ export default async function AdminDashboardLayout({
     <div className="flex min-h-screen bg-paper-deep">
       <aside className="flex w-60 shrink-0 flex-col border-r border-line bg-white">
         <div className="flex items-center gap-2.5 border-b border-line px-5 py-5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-ink font-mono text-[10px] font-semibold">
-            CC
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/Logo.png" alt="" className="h-9 w-auto" />
           <span className="font-display text-sm font-bold">Admin</span>
         </div>
         <nav className="flex-1 space-y-1 px-3 py-4">

@@ -14,13 +14,24 @@ export async function POST(request: Request) {
 
   const body = await request.json();
   const items: CheckoutRequestItem[] = Array.isArray(body?.items) ? body.items : [];
-  const email: string | undefined = body?.email;
 
   if (items.length === 0) {
     return NextResponse.json({ error: "Basket is empty." }, { status: 400 });
   }
 
   const supabase = await createClient();
+
+  // Defense in depth: the /checkout page already redirects logged-out
+  // visitors to /login, but this route enforces it too since it can be
+  // called directly.
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    return NextResponse.json({ error: "auth_required" }, { status: 401 });
+  }
+
   const slugs = items.map((i) => i.id);
   const { data: products, error } = await supabase
     .from("products")
@@ -57,7 +68,8 @@ export async function POST(request: Request) {
   const session = await stripe.checkout.sessions.create({
     mode: "payment",
     line_items,
-    customer_email: email,
+    customer_email: user.email,
+    client_reference_id: user.id,
     success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${origin}/cart`,
   });

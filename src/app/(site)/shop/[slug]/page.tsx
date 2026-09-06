@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const product = await getProduct(slug);
   if (!product) return {};
   return {
-    title: `${product.name} — CareComply UK`,
+    title: `${product.name} — KEPA HUB`,
     description: product.description,
   };
 }

@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/container";
 import { ContactForm } from "@/components/marketing/contact-form";
 
 export const metadata = {
-  title: "Contact — CareComply UK",
+  title: "Contact — KEPA HUB",
   description: "Questions about an order, a template, or anything else? Send us a message.",
 };
 
@@ -41,7 +41,7 @@ export default function ContactPage() {
           </div>
           <div className="rounded-lg bg-paper-deep p-6">
             <h4 className="mb-2.5 text-base">Email us directly</h4>
-            <p className="text-sm text-grey">hello@carecomply.co.uk [placeholder]</p>
+            <p className="text-sm text-grey">hello@kepahub.co.uk [placeholder]</p>
           </div>
           <div className="rounded-lg bg-paper-deep p-6">
             <h4 className="mb-3 text-base">Follow along</h4>

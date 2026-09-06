@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button";
 import { useCart } from "@/lib/cart/cart-context";
 import { cn } from "@/lib/utils";
-import { ShoppingBasket, Menu, X } from "lucide-react";
+import { ShoppingBasket, Menu, X, User } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -26,15 +27,20 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-100 border-b border-line bg-paper">
-      <Container className="flex items-center justify-between gap-5 py-[18px]">
+      <Container className="flex items-center justify-between gap-5 py-[14px]">
         <Link
           href="/"
           className="flex shrink-0 items-center gap-2.5 font-display text-[21px] font-bold tracking-[-0.01em]"
         >
-          <span className="flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full border-2 border-ink font-mono text-[11px] font-semibold">
-            CC
-          </span>
-          CareComply UK
+          <Image
+            src="/Logo.png"
+            alt="KEPA HUB"
+            width={56}
+            height={56}
+            className="h-14 w-auto"
+            priority
+          />
+          KEPA HUB
         </Link>
 
         <nav
@@ -68,6 +74,9 @@ export function SiteHeader() {
           >
             Book a Call
           </ButtonLink>
+          <Link href="/account" aria-label="My Account" className="inline-flex text-[19px]">
+            <User size={21} strokeWidth={1.75} />
+          </Link>
           <Link
             href="/cart"
             aria-label="Basket"

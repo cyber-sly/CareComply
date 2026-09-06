@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { AccordionItem } from "@/components/ui/accordion-item";
 
 export const metadata = {
-  title: "FAQs — CareComply UK",
+  title: "FAQs — KEPA HUB",
   description: "Everything you need to know before buying a template or booking a consultation.",
 };
 
@@ -30,7 +30,7 @@ export default function FAQsPage() {
             Yes, with your agency&rsquo;s name and logo, in line with our licence terms.
           </AccordionItem>
           <AccordionItem question="Are these templates legally required documents?">
-            No — they are templates to help you meet CQC/CIW expectations; you remain responsible
+            No — they are templates to help you meet CIW expectations; you remain responsible
             for compliance.
           </AccordionItem>
         </div>
@@ -64,8 +64,8 @@ export default function FAQsPage() {
             page and choose a service to see live availability.
           </AccordionItem>
           <AccordionItem question="Do you cover Scotland (Care Inspectorate) or Northern Ireland (RQIA)?">
-            [Scope to be confirmed — our current templates and consultancy are written around CQC
-            (England) and CIW (Wales) standards.]
+            [Scope to be confirmed — our current templates and consultancy are written around CIW
+            (Wales) standards.]
           </AccordionItem>
         </div>
       </Container>

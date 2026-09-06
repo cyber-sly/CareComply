@@ -1,4 +1,4 @@
-# CareComply UK — Next.js Rebuild
+# KEPA HUB — Next.js Rebuild
 
 Rebuilt from the original static HTML site into Next.js 14 (App Router) + TypeScript + Tailwind CSS v4, backed by Supabase, ready to deploy on Vercel.
 

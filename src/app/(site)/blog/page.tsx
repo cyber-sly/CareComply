@@ -4,7 +4,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { getPosts } from "@/lib/supabase/queries";
 
 export const metadata = {
-  title: "Blog — CareComply UK",
+  title: "Blog — KEPA HUB",
   description: "Compliance tips and guidance for UK domiciliary care agencies.",
 };
 
@@ -46,9 +46,8 @@ export default async function BlogIndexPage() {
                 />
               ) : (
                 <div className="flex h-40 items-center justify-center border-b border-line bg-paper-deep">
-                  <div className="flex h-[70px] w-[70px] items-center justify-center rounded-full border-2 border-clay">
-                    <span className="font-mono text-[8px] font-bold text-clay">CC</span>
-                  </div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/logo-icon.jpg" alt="" className="h-16 w-auto" />
                 </div>
               )}
               <div className="p-6">

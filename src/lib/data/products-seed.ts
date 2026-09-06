@@ -28,7 +28,7 @@ export const PRODUCTS_SEED: ProductRow[] = [
     type: "Bundle",
     tag: "Most popular for new agencies",
     description:
-      "10 person-centred care plans and 6 risk assessments, fully editable and ready for CQC/CIW-aligned care delivery from day one.",
+      "10 person-centred care plans and 6 risk assessments, fully editable and ready for CIW-aligned care delivery from day one.",
     contents: ["10 person-centred care plans", "6 risk assessments", "Word & PDF, instant download"],
     sort_order: 1,
   }),
@@ -65,7 +65,7 @@ export const PRODUCTS_SEED: ProductRow[] = [
     name: "Falls Risk Assessment",
     price: 5,
     type: "Single template",
-    description: "A single, CQC/CIW-aligned falls risk assessment template.",
+    description: "A single, CIW-aligned falls risk assessment template.",
     sort_order: 5,
   }),
   row({

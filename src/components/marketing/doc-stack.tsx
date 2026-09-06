@@ -36,7 +36,7 @@ export function DocStack() {
 
       <div className="relative z-30 flex h-[110px] w-[110px] shrink-0 -rotate-12 items-center justify-center rounded-full border-[3px] border-clay text-center">
         <span className="font-mono text-[10px] font-bold leading-tight text-clay">
-          CQC &amp; CIW
+          CIW
           <br />
           ALIGNED
         </span>

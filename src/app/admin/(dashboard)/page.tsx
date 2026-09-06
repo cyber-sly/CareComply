@@ -22,7 +22,7 @@ export default async function AdminHomePage() {
     <div>
       <h1 className="mb-1 text-2xl">Dashboard</h1>
       <p className="mb-8 text-sm text-grey">
-        Manage what shows up on the CareComply UK website.
+        Manage what shows up on the KEPA HUB website.
       </p>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
         {cards.map((card) => {

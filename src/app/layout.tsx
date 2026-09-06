@@ -23,9 +23,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CareComply UK — Professional Templates for Safer, Compliant Care",
+  title: "KEPA HUB — Professional Templates for Safer, Compliant Care",
   description:
-    "Professionally written care plans, risk assessments and policies for UK domiciliary care agencies, aligned to CQC and CIW standards. Instant download or book a consultant.",
+    "Professionally written care plans, risk assessments and policies for UK domiciliary care agencies, aligned to CIW standards. Instant download or book a consultant.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

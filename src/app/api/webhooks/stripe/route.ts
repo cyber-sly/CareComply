@@ -36,6 +36,7 @@ export async function POST(request: Request) {
       .from("orders")
       .insert({
         stripe_session_id: session.id,
+        user_id: session.client_reference_id ?? null,
         email: session.customer_email ?? session.customer_details?.email ?? "unknown",
         total: (session.amount_total ?? 0) / 100,
         status: "paid",

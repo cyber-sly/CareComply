@@ -24,7 +24,7 @@ const SERVICES: Service[] = [
   },
   {
     id: "mock-inspection",
-    title: "Mock CIW/CQC Inspection",
+    title: "Mock CIW Inspection",
     price: "From £[X] · remote or on-site",
     description: "A full walkthrough of your documentation and processes as an inspector would see them, with a written report of strengths and gaps.",
     variant: "paid",
@@ -34,7 +34,7 @@ const SERVICES: Service[] = [
     id: "policy-review",
     title: "Policy Review",
     price: "From £[X] · per policy set",
-    description: "Send us your existing policies; we review them against current CQC/CIW expectations and return tracked-change recommendations.",
+    description: "Send us your existing policies; we review them against current CIW expectations and return tracked-change recommendations.",
     variant: "paid",
     note: "Large policy packs may need a quote-on-request step before booking — to be confirmed with pricing decisions.",
   },

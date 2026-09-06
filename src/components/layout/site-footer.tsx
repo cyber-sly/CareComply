@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { NewsletterForm } from "@/components/layout/newsletter-form";
 
@@ -16,9 +17,12 @@ export function SiteFooter() {
       <Container className="py-16">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="font-display text-lg font-bold">CareComply UK</div>
+            <div className="flex items-center gap-2">
+              <Image src="/Logo.png" alt="" width={44} height={44} className="h-11 w-auto" />
+              <span className="font-display text-lg font-bold">KEPA HUB</span>
+            </div>
             <p className="mt-2 max-w-[220px] text-sm text-grey">
-              Professional templates for safer, compliant care.
+              Helping care providers build safer, stronger and inspection-ready services.
             </p>
             <div className="mt-4 flex gap-3">
               {SOCIALS.map((s) => (
@@ -64,7 +68,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-line pt-6 text-xs text-grey sm:flex-row sm:items-center sm:justify-between">
-          <span>&copy; {new Date().getFullYear()} CareComply UK. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} KEPA HUB. All rights reserved.</span>
           <div className="flex flex-wrap gap-4">
             <Link href="/legal/privacy-policy" className="hover:text-ink">Privacy Policy</Link>
             <Link href="/legal/terms" className="hover:text-ink">Terms</Link>

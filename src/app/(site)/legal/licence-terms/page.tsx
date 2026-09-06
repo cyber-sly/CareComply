@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LegalPage } from "@/components/marketing/legal-page";
 
-export const metadata = { title: "Licence Terms — CareComply UK" };
+export const metadata = { title: "Licence Terms — KEPA HUB" };
 
 export default function LicenceTermsPage() {
   return (
@@ -11,7 +11,7 @@ export default function LicenceTermsPage() {
     >
       <p>
         This page explains what you can and can&rsquo;t do with templates purchased from
-        CareComply UK. This is a draft and the specific terms below (especially multi-location
+        KEPA HUB. This is a draft and the specific terms below (especially multi-location
         use) need a decision from the business owner before publishing.
       </p>
 
@@ -39,7 +39,7 @@ export default function LicenceTermsPage() {
 
       <h2>4. Ownership</h2>
       <p>
-        CareComply UK retains copyright ownership of all template designs and structures. Your
+        KEPA HUB retains copyright ownership of all template designs and structures. Your
         licence grants usage rights, not ownership of the underlying content.
       </p>
 

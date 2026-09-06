@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LegalPage } from "@/components/marketing/legal-page";
 
-export const metadata = { title: "Terms & Conditions — CareComply UK" };
+export const metadata = { title: "Terms & Conditions — KEPA HUB" };
 
 export default function TermsPage() {
   return (
@@ -10,7 +10,7 @@ export default function TermsPage() {
       updated="[PLACEHOLDER — to be reviewed by a solicitor before publishing] · Last updated: June 2026"
     >
       <p>
-        These Terms &amp; Conditions govern your use of the CareComply UK website and any
+        These Terms &amp; Conditions govern your use of the KEPA HUB website and any
         purchase of templates or consultancy services. This is a draft template and must be
         reviewed by a solicitor before publishing. By using this website or purchasing from us,
         you agree to these terms.
@@ -34,8 +34,8 @@ export default function TermsPage() {
 
       <h2>3. No guarantee of inspection outcome</h2>
       <p>
-        Our templates and consultancy services are designed to support compliance with CQC and
-        CIW expectations, but we cannot guarantee any specific inspection outcome. You remain
+        Our templates and consultancy services are designed to support compliance with CIW
+        expectations, but we cannot guarantee any specific inspection outcome. You remain
         responsible for ensuring your service meets all applicable regulatory requirements.
       </p>
 
@@ -54,7 +54,7 @@ export default function TermsPage() {
 
       <h2>6. Limitation of liability</h2>
       <p>
-        [To be reviewed with a solicitor] To the extent permitted by law, CareComply UK&rsquo;s
+        [To be reviewed with a solicitor] To the extent permitted by law, KEPA HUB&rsquo;s
         liability for any claim relating to our templates or services is limited to the amount
         paid for the relevant product or service.
       </p>

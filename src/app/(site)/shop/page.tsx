@@ -5,7 +5,7 @@ import { getProducts } from "@/lib/supabase/queries";
 import { formatGBP } from "@/lib/utils";
 
 export const metadata = {
-  title: "Shop — CareComply UK",
+  title: "Shop — KEPA HUB",
   description: "Browse care plans, risk assessments and policy packs for UK domiciliary care agencies.",
 };
 

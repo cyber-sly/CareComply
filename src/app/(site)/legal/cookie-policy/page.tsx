@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LegalPage } from "@/components/marketing/legal-page";
 
-export const metadata = { title: "Cookie Policy — CareComply UK" };
+export const metadata = { title: "Cookie Policy — KEPA HUB" };
 
 export default function CookiePolicyPage() {
   return (
@@ -10,7 +10,7 @@ export default function CookiePolicyPage() {
       updated="[PLACEHOLDER — to be reviewed by a solicitor before publishing] · Last updated: June 2026"
     >
       <p>
-        This Cookie Policy explains how CareComply UK uses cookies and similar technologies on
+        This Cookie Policy explains how KEPA HUB uses cookies and similar technologies on
         our website. This is a draft template to be reviewed before publishing, alongside a real
         cookie consent banner.
       </p>
