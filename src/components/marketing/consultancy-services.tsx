@@ -25,7 +25,7 @@ const SERVICES: Service[] = [
   {
     id: "mock-inspection",
     title: "Mock CIW Inspection",
-    price: "From £[X] · remote or on-site",
+    price: "Free · remote or on-site",
     description: "A full walkthrough of your documentation and processes as an inspector would see them, with a written report of strengths and gaps.",
     variant: "paid",
     note: "In the live site: visitor picks a date/time, fills in name, email, phone and a short \u201cwhat would you like help with?\u201d field, then pays the fee to confirm.",
@@ -33,7 +33,7 @@ const SERVICES: Service[] = [
   {
     id: "policy-review",
     title: "Policy Review",
-    price: "From £[X] · per policy set",
+    price: "From £10 · per policy set",
     description: "Send us your existing policies; we review them against current CIW expectations and return tracked-change recommendations.",
     variant: "paid",
     note: "Large policy packs may need a quote-on-request step before booking — to be confirmed with pricing decisions.",
@@ -41,7 +41,7 @@ const SERVICES: Service[] = [
   {
     id: "mentoring",
     title: "Registered Manager Mentoring",
-    price: "From £[X] · per session",
+    price: "From £25 · per session",
     description: "Ongoing 1:1 support for registered managers — new or experienced — covering compliance, staff management, and inspection readiness.",
     variant: "paid",
     note: "Could offer single-session or monthly retainer booking options once pricing is confirmed.",

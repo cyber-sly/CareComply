@@ -33,13 +33,18 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
           {formatDate(post.published_at)} · {post.author}
         </div>
         <h1 className="mb-6 text-[32px] leading-tight md:text-[40px]">{post.title}</h1>
-        {post.cover_image_url && (
+        {post.cover_image_url ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={post.cover_image_url}
             alt=""
             className="mb-8 w-full rounded-lg border border-line object-cover"
           />
+        ) : (
+          <div className="mb-8 flex h-48 items-center justify-center rounded-lg border border-line bg-paper-deep p-8 sm:h-64">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.jpg" alt="" className="max-h-full max-w-full object-contain" />
+          </div>
         )}
       </Container>
       <Container className="max-w-[760px] pb-20">

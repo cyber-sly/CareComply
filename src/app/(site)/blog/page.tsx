@@ -45,9 +45,9 @@ export default async function BlogIndexPage() {
                   className="h-40 w-full border-b border-line object-cover"
                 />
               ) : (
-                <div className="flex h-40 items-center justify-center border-b border-line bg-paper-deep">
+                <div className="flex h-40 items-center justify-center border-b border-line bg-paper-deep p-8">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/logo-icon.jpg" alt="" className="h-16 w-auto" />
+                  <img src="/logo.jpg" alt="" className="max-h-full max-w-full object-contain" />
                 </div>
               )}
               <div className="p-6">
